@@ -393,7 +393,6 @@ public class MultipleLinealRegressionByCrammer {
         setDetMatrixB0_p();
         setDetMatrixB1_p();
         setDetMatrixB2_p();
-        setDetMatrixT_p();
         setBeta0_p();
         setBeta1_p();
         setBeta2_p();
