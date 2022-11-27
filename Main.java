@@ -20,7 +20,7 @@ public class Main {
         SimpleLinealRegressionByCrammer simpleLinealRegressionByCrammer = new SimpleLinealRegressionByCrammer(x, y);
         System.out.println("Betas Vector: ");
         simpleLinealRegressionByCrammer.getVectorBetas();
-        System.out.println("Formula: " + simpleLinealRegressionByCrammer.getFormula());
+        System.out.println("\nFormula: " + simpleLinealRegressionByCrammer.getFormula());
         // simpleLinealRegressionByCrammer.predict(predicts);
         // System.out.println("Formula Predict n = " + predicts + ": " +
         // simpleLinealRegressionByCrammer.getFormula_p());

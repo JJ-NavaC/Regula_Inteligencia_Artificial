@@ -31,25 +31,25 @@ public class MultipleLinealRegressionByCrammer {
 
     // Constructor
     MultipleLinealRegressionByCrammer(double[] _setX1, double[] _setX2, double[] _setY) {
-         this.setX1 = _setX1;
-         this.setX2 = _setX2;
-         this.setY = _setY;
-         this.n = _setX1.length;
-         setSumX1();
-         setSumX2();
-         setSumY();
-         setMatrix();
-         setMatrixB0();
-         setMatrixB1();
-         setMatrixB2();
-         setDetMatrixT();
-         setDetMatrixB0();
-         setDetMatrixB1();
-         setDetMatrixB2();
-         setBeta0();
-         setBeta1();
-         setBeta2();
-     }
+        this.setX1 = _setX1;
+        this.setX2 = _setX2;
+        this.setY = _setY;
+        this.n = _setX1.length;
+        setSumX1();
+        setSumX2();
+        setSumY();
+        setMatrix();
+        setMatrixB0();
+        setMatrixB1();
+        setMatrixB2();
+        setDetMatrixT();
+        setDetMatrixB0();
+        setDetMatrixB1();
+        setDetMatrixB2();
+        setBeta0();
+        setBeta1();
+        setBeta2();
+    }
 
     // Getters
     public String getY() {
@@ -160,14 +160,14 @@ public class MultipleLinealRegressionByCrammer {
         return y_p;
     }
 
-    public float getDetMatrix(double[][] x) {
-        float det = (float) ((x[0][0] * x[1][1] * x[2][2])
+    public double getDetMatrix(double[][] x) {
+        double det = ((x[0][0] * x[1][1] * x[2][2])
                 + (x[0][1] * x[1][2] * x[2][0])
                 + (x[0][2] * x[1][0] * x[2][1])
                 - (x[2][0] * x[1][1] * x[0][2])
                 - (x[2][1] * x[1][2] * x[0][0])
                 - (x[2][2] * x[1][0] * x[0][1]));
-        return (float) det;
+        return det;
     }
 
     // Setters
@@ -311,35 +311,35 @@ public class MultipleLinealRegressionByCrammer {
     }
 
     public void setDetMatrixT() {
-        this.detT = (float) getDetMatrix(this.matrix);
+        this.detT = getDetMatrix(this.matrix);
         // printDetProcess(this.matrix);
     }
 
     public void setDetMatrixB0() {
-        this.detB0 = (float) getDetMatrix(this.matrixB0);
+        this.detB0 = getDetMatrix(this.matrixB0);
         // printDetProcess(this.matrixB0);
     }
 
     public void setDetMatrixB1() {
-        this.detB1 = (float) getDetMatrix(this.matrixB1);
+        this.detB1 = getDetMatrix(this.matrixB1);
         // printDetProcess(this.matrixB1);
     }
 
     public void setDetMatrixB2() {
-        this.detB2 = (float) getDetMatrix(this.matrixB2);
+        this.detB2 = getDetMatrix(this.matrixB2);
         // printDetProcess(this.matrixB2);
     }
 
     public void setBeta0() {
-        this.beta_0 = (float) this.detB0 / this.detT;
+        this.beta_0 = this.detB0 / this.detT;
     }
 
     public void setBeta1() {
-        this.beta_1 = (float) this.detB1 / this.detT;
+        this.beta_1 = this.detB1 / this.detT;
     }
 
     public void setBeta2() {
-        this.beta_2 = (float) this.detB2 / this.detT;
+        this.beta_2 = this.detB2 / this.detT;
     }
 
     // Print Functions
