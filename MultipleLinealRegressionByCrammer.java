@@ -353,7 +353,7 @@ public class MultipleLinealRegressionByCrammer {
     }
 
     public String getFormula() {
-        this.y = "ŷ = " + this.beta_0 + " + " + this.beta_1 + "x1 + " + this.beta_2 + "x2 + ε";
+        this.y = "y = " + this.beta_0 + " + " + this.beta_1 + "x1 + " + this.beta_2 + "x2 + ε";
         return this.y;
     }
 

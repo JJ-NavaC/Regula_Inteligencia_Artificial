@@ -94,8 +94,8 @@ public class SimpleLinealRegressionByCrammer {
     }
 
     public void getVectorBetas() {
-        System.out.println(getBeta_0());
-        System.out.println(getBeta_1());
+        System.out.println("Beta 0: " + getBeta_0());
+        System.out.println("Beta 1: " + getBeta_1());
     }
 
     // ! Setters
@@ -192,7 +192,7 @@ public class SimpleLinealRegressionByCrammer {
     }
 
     public String getFormula() {
-        this.y = "ŷ = " + this.beta_0 + " + " + this.beta_1 + "x1 + ε";
+        this.y = "y = " + this.beta_0 + " + " + this.beta_1 + "x1 + ε";
         return this.y;
     }
 
